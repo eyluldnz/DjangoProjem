@@ -31,6 +31,8 @@ class Book(models.Model):
     )
     category = models.ForeignKey(Category, on_delete=models.CASCADE)  # categori ile ilişki kuruluyor
     title = models.CharField(max_length=150)
+    author=models.CharField(max_length=255)
+    dates=models.CharField(max_length=255)
     keywords = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
     image = models.ImageField(blank=True, upload_to='images/')
