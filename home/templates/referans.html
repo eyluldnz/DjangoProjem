@@ -1,0 +1,46 @@
+ {% extends "homebase.html" %}
+
+ {% block title %} Referans-{{ setting.company }} {% endblock %}
+ {% block keywords %} {{ setting.keywords }} {% endblock %}
+ {% block description %} {{ setting.description}} {% endblock %}
+ {% block head %}
+     <link rel='shortcut icon' type="image/x-icon" href="{{ setting.icon.url}} " />
+ {% endblock %}
+
+
+ {% block body %}
+ {% load static %}
+ <div class="hero_slider_container">
+			<div class="hero_slider owl-carousel">
+
+				<!-- Hero Slide -->
+				<div class="hero_slide">
+					<div class="hero_slide_background" style="background-image:url({% static 'images/event_1.jpg' %})"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<div class="hero_slide_content text-center">
+							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">REFERANSLAR
+						</div>
+					</div>
+				</div>
+            </div>
+ </div>
+
+
+	<div class="popular page_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1></h1>
+					</div>
+				</div>
+			</div>
+            <div>
+                {{ setting.references |safe }}
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

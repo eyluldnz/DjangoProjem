@@ -3,35 +3,21 @@
 		<div class="hero_slider_container">
 			<div class="hero_slider owl-carousel">
 
+				{% for rs in sliderdata %}
 				<!-- Hero Slide -->
 				<div class="hero_slide">
-					<div class="hero_slide_background" style="background-image:url({% static 'images/slider_background.jpg' %})"></div>
+					<div class="hero_slide_background" style="background-image:url({{ rs.image.url }})"></div>
 					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
 						<div class="hero_slide_content text-center">
-							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get your <span>Education</span> today!</h1>
-						</div>
-					</div>
-				</div>
+							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut"> {{ rs.title }}</h1>
 
-				<!-- Hero Slide -->
-				<div class="hero_slide">
-					<div class="hero_slide_background" style="background-image:url({% static 'images/slider_background.jpg' %})"></div>
-					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-						<div class="hero_slide_content text-center">
-							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get your <span>Education</span> today!</h1>
 						</div>
+						<div class="button button_line_2 text-center trans_200"><a href="/book/{{ rs.id }} "> İncele</a></div>
 					</div>
 				</div>
+				{% endfor %}
 
-				<!-- Hero Slide -->
-				<div class="hero_slide">
-					<div class="hero_slide_background" style="background-image:url({% static 'images/slider_background.jpg' %})"></div>
-					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
-						<div class="hero_slide_content text-center">
-							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Get your <span>Education</span> today!</h1>
-						</div>
-					</div>
-				</div>
+
 
 			</div>
 

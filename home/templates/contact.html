@@ -1,0 +1,87 @@
+ {% extends "homebase.html" %}
+
+ {% block title %} Referans-{{ setting.company }} {% endblock %}
+ {% block keywords %} {{ setting.keywords }} {% endblock %}
+ {% block description %} {{ setting.description}} {% endblock %}
+ {% block head %}
+     <link rel='shortcut icon' type="image/x-icon" href="{{ setting.icon.url}} " />
+ {% endblock %}
+
+
+ {% block body %}
+ {% load static %}
+ <div class="hero_slider_container">
+			<div class="hero_slider owl-carousel">
+
+				<!-- Hero Slide -->
+				<div class="hero_slide">
+					<div class="hero_slide_background" style="background-image:url({% static 'images/course_5.jpg' %})"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<div class="hero_slide_content text-center">
+							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">İLETİŞİM
+						</div>
+					</div>
+				</div>
+            </div>
+ </div>
+
+
+	<div class="popular page_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1></h1>
+					</div>
+				</div>
+			</div>
+            <div>
+				<div class="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+
+					<!-- Contact Form -->
+					<div class="contact_form">
+						<div class="contact_title"><h3>Bize Ulaşın</h3></div>
+						<div class="contact_form_container">
+
+						{% if messages %}
+							{% for message in messages %}
+								<div class="alert alert-{{message.tags}}" role="alert">
+									{{ message }}
+								</div>
+							{% endfor %}
+						{% endif %}
+						<form action="" method="post">
+							{% csrf_token %}
+							{{ forms.as_p }}
+							<input class="contact_send_btn trans_200" type="submit" value="Gönder">
+						</form>
+
+					</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="about">
+						<div class="about_title"><h3>İletişim</h3></div>
+
+						<div class="contact_info">
+							 {{ setting.contact |safe }}
+						</div>
+
+					</div>
+				</div>
+
+
+        </div>
+    </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}
