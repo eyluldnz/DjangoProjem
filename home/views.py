@@ -47,3 +47,13 @@ def contact(request):
     forms =ContactFormu()
     context = {'setting': setting, 'forms':forms}
     return render(request,'contact.html',context)
+
+def category_books(request,id, slug):
+    category = Category.objects.all()
+    categorydata=Category.objects.get(pk=id)
+    books = Book.objects.filter(category_id=id)
+    context = {'books': books,
+               'category': category,
+               'categorydata': categorydata}
+
+    return render(request, 'kitaplar.html', context)

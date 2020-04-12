@@ -15,14 +15,15 @@
 									{% recursetree category %}
 
 										<li class="dropdown">
-											<button type="button" class="btn dropdown" {% if not node.is_leaf_node %} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {% endif %}> <a href="/category/{{ node.slug }}"> <span>{{ node.title}} </span> </a></button>
+											<button type="button" class="btn dropdown" {% if not node.is_leaf_node %} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {% endif %}> <a href="/category/{{ node.id }}/{{ node.slug }}">
+													<span>{{ node.title}} </span> </a></button>
 												<div class="dropdown-menu">
 													<div class="btn-group droprightt">
 														<div class="col-lg-10">
 
 															{% if not node.is_leaf_node %}
 																<ul class="children">
-																	<li> <span> {{ children }}</span></li>
+																	<li> <span> {{ children }}</span> </li>
 																</ul>
           										  			{% endif %}
 														</div>
