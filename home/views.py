@@ -3,14 +3,16 @@ from django.shortcuts import render
 from django.contrib import  messages
 
 # Create your views here.
-from book.models import Book
+from book.models import Book, Category
 from home.models import Setting, ContactFormMessage, ContactFormu
 
 
 def index(request):
     setting =Setting.objects.get(pk=1)
     sliderdata=Book.objects.all()[:4]
+    category= Category.objects.all()
     context = {'setting': setting, 'page': 'home',
+               'category':category,
                'sliderdata': sliderdata}
     return render(request,'index.html',context)
 
