@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.contrib import  messages
 
 # Create your views here.
-from book.models import Book, Category
+from book.models import Book, Category, Images
 from home.models import Setting, ContactFormMessage, ContactFormu
 
 
@@ -57,3 +57,14 @@ def category_books(request,id, slug):
                'categorydata': categorydata}
 
     return render(request, 'kitaplar.html', context)
+
+def book_detail(request,id):
+    category = Category.objects.all()
+    book = Book.objects.get(pk=id)
+    images=Images.objects.filter(book_id=id)
+    context = { 'book':book,
+               'category': category,
+                'images': images
+               }
+
+    return render(request, 'kitapdetay.html',context)
