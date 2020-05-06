@@ -3,6 +3,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 from django.forms import ModelForm, TextInput, Textarea
 
 
+
 class Setting(models.Model):
     STATUS = (
         ('True', 'Evet'), ('False', 'Hayır'),

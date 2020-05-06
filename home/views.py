@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.contrib import  messages
 
 # Create your views here.
-from book.models import Book, Category, Images
+from book.models import Book, Category, Images, Comment
 from home.models import Setting, ContactFormMessage, ContactFormu
 
 
@@ -62,9 +62,11 @@ def book_detail(request,id):
     category = Category.objects.all()
     book = Book.objects.get(pk=id)
     images=Images.objects.filter(book_id=id)
+    comments =Comment.objects.filter(book_id=id,status='True')
     context = { 'book':book,
                'category': category,
-                'images': images
+                'images': images,
+                'comments': comments
                }
 
     return render(request, 'kitapdetay.html',context)

@@ -106,10 +106,79 @@
       </h5>
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+<!-- Comments -->
+					<div class="news_post_comments">
+						<div class="comments_title"></div>
+						<ul class="comments_list">
+
+							{%for com in comments %}
+							<li class="comment">
+								<div class="comment_container d-flex flex-row">
+
+									<div class="comment_content">
+										<div class="comment_meta">
+											<span class="comment_name">
+												<strong> Gönderen:&nbsp; </strong>{{ com.user}} &nbsp;
+											</span>
+											<span class="comment_separator">|&nbsp;</span>
+											<span class="comment_date">{{com.created_at}}</span>
+											<span class="comment_separator">|&nbsp;</span>
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<span class="comment_reply_link"><strong>{{ com.rate}} Puan </strong></span>
+										</div>
+										<p class="comment_text"> <span> {{ com.comment}} </span></p>
+									</div>
+								</div>
+							</li>
+							{% endfor %}
 
 
-    </div>
-  </div>
+						</ul>
+
+					</div>
+
+					<!-- Leave Comment -->
+
+					<div class="leave_comment">
+						<div class="leave_comment_title">Yorumunuz...</div>
+						{% if messages %}
+							{% for message in messages %}
+								<div class="alert alert-{{message.tags}}" role="alert">
+									{{ message }}
+								</div>
+							{% endfor %}
+						{% endif %}
+
+
+						<div class="leave_comment_form_container">
+							<form action="/book/addcomment/{{ book.id }}" method="post">
+								{% csrf_token %}
+								<div class="form-group">
+									<input id="comment_form_name" class="input_field contact_form_name" name="subject" type="text" placeholder="Subject" required="required" >
+								</div>
+								<div class="form-group">
+									<textarea id="comment_form_message" class="input_field contact_form_name" name="comment" placeholder="Comment" required="required" ></textarea>
+								</div>
+								<div class="form-group">
+											<h6>Kitaba Puanınız:</h6>
+											<input type="radio" id="star3" name="rate" value="3"/> <label for="star3">İyi</label>
+											<input type="radio" id="star2" name="rate" value="2"/> <label for="star2">Orta</label>
+											<input type="radio" id="star1" name="rate" value="1"/> <label for="star1">Kötü</label>
+
+								</div>
+								{% if user.id is not None %}
+								<button id="comment_send_btn" type="submit" class="btn btn-outline-warning" value="Submit">Gönder</button>
+								{% else %}
+									Yorum göndermek için lütfen giriş yapınız
+								{% endif %}
+							</form>
+						</div>
+					</div>
+
+				</div>
+
+   			 </div>
+ 			 </div>
 
              </div>
 
@@ -117,17 +186,10 @@
 			</div>
 			</div>
 			</div>
-
-
 	 </div>
-
-
-
                 {% include "sidebar.html" %}
 
         </div>
-
-
-</div>
+	</div>
  {% endblock %}
 
