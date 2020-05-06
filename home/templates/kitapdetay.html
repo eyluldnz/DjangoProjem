@@ -78,11 +78,13 @@
 							<br>
 					        <div class="col-lg-4"> <button type="button" class="btn btn-outline-warning" >Sepete Ekle</button></div>
                        </div>
+
+
 				</div>
 
-				  <div id="accordion">
+ 				<div id="accordion" >
 					  <br>
- 					 <div class="card">
+ 					 <div class="card" style="width:1000px;">
    						 <div class="card-header" id="headingOne">
      						 <h5 class="mb-0">
        							 <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -97,16 +99,16 @@
      						 </div>
    						 </div>
   				</div>
-					   <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Yorumlar
-        </button>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-<!-- Comments -->
+					   <div class="card" style="width:1000px;">
+    						<div class="card-header" id="headingTwo">
+     							 <h5 class="mb-0">
+									 <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          								Yorumlar
+       									 </button>
+     									 </h5>
+    									</div>
+   				 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+				<!-- Comments -->
 					<div class="news_post_comments">
 						<div class="comments_title"></div>
 						<ul class="comments_list">
@@ -118,7 +120,7 @@
 									<div class="comment_content">
 										<div class="comment_meta">
 											<span class="comment_name">
-												<strong> Gönderen:&nbsp; </strong>{{ com.user}} &nbsp;
+												&nbsp;<strong> Gönderen:&nbsp; </strong>{{ com.user}} &nbsp;
 											</span>
 											<span class="comment_separator">|&nbsp;</span>
 											<span class="comment_date">{{com.created_at}}</span>
@@ -126,7 +128,7 @@
 											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 											<span class="comment_reply_link"><strong>{{ com.rate}} Puan </strong></span>
 										</div>
-										<p class="comment_text"> <span> {{ com.comment}} </span></p>
+										<p class="comment_text"> <span> &nbsp;&nbsp;{{ com.comment}} </span></p>
 									</div>
 								</div>
 							</li>
@@ -140,7 +142,7 @@
 					<!-- Leave Comment -->
 
 					<div class="leave_comment">
-						<div class="leave_comment_title">Yorumunuz...</div>
+						&nbsp;&nbsp;&nbsp;&nbsp;<div class="leave_comment_title">Yorumunuz...</div>
 						{% if messages %}
 							{% for message in messages %}
 								<div class="alert alert-{{message.tags}}" role="alert">
@@ -153,21 +155,22 @@
 						<div class="leave_comment_form_container">
 							<form action="/book/addcomment/{{ book.id }}" method="post">
 								{% csrf_token %}
-								<div class="form-group">
+								&nbsp;<div class="form-group">
 									<input id="comment_form_name" class="input_field contact_form_name" name="subject" type="text" placeholder="Subject" required="required" >
 								</div>
-								<div class="form-group">
+								&nbsp;<div class="form-group">
 									<textarea id="comment_form_message" class="input_field contact_form_name" name="comment" placeholder="Comment" required="required" ></textarea>
 								</div>
-								<div class="form-group">
+								&nbsp;<div class="form-group">
 											<h6>Kitaba Puanınız:</h6>
-											<input type="radio" id="star3" name="rate" value="3"/> <label for="star3">İyi</label>
-											<input type="radio" id="star2" name="rate" value="2"/> <label for="star2">Orta</label>
-											<input type="radio" id="star1" name="rate" value="1"/> <label for="star1">Kötü</label>
+											&nbsp;&nbsp;&nbsp;<input type="radio" id="star3" name="rate" value="3"/> <label for="star3">İyi</label>
+											&nbsp;&nbsp;&nbsp;<input type="radio" id="star2" name="rate" value="2"/> <label for="star2">Orta</label>
+											&nbsp;&nbsp;&nbsp;<input type="radio" id="star1" name="rate" value="1"/> <label for="star1">Kötü</label>
 
 								</div>
 								{% if user.id is not None %}
-								<button id="comment_send_btn" type="submit" class="btn btn-outline-warning" value="Submit">Gönder</button>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="comment_send_btn" type="submit" class="btn btn-outline-warning" value="Submit">Gönder</button>
+								<br>
 								{% else %}
 									Yorum göndermek için lütfen giriş yapınız
 								{% endif %}
@@ -186,8 +189,9 @@
 			</div>
 			</div>
 			</div>
+				{% include "sidebar.html" %}
 	 </div>
-                {% include "sidebar.html" %}
+
 
         </div>
 	</div>

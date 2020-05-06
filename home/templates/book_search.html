@@ -33,31 +33,32 @@
 						<div class="container">
 							<div class="row">
 								<div class="col">
-					<div class="section_title text-center">
-						<h1> {{ categorydata.title}} Kitapları</h1>
+					<div class="section_title ">
+						<h6> "{{  query}}" Hakkında Arama Sonuçları.... </h6>
 					</div>
 				</div>
-								</div>
+							</div>
 
 							<div class="row course_boxes">
+								<table cellpadding="3" width="1000">
+									<tr>
+										<th>Görsel</th>
+										<th>Kitap</th>
+										<th>Kategori</th>
+										<th>Adet</th>
+									</tr>
 
-				{% for rs in books %}
-				<div class="col-lg-4 course_box">
-					<div class="card">
-						<img class="card-img-top" src="{{ rs.image.url }} ">
-						<div class="card-body text-center">
-							<div class="card-title"><a href="/book/{{ rs.id }}/ ">{{ rs.title }}</a></div>
-							<div class="card-text"> {{ rs.author }}</div>
-						</div>
-						<div class="price_box d-flex flex-row align-items-center">
+									{% for rs in books %}
+									<tr> <br>
+										<td> <a href="/book/{{ rs.id }}"> <img src="{{ rs.image.url }}" style="height:150px; width:100px; margin-top:10px;"></a></td>
+										<td> <a href="/book/{{ rs.id }}"></a> {{ rs.title }}</td>
+										<td> <a href="/category/{{ rs.category.id }}/{{ rs.category.slug }}"> {{ rs.category }} </a></td>
+										<td> {{ rs.amount}}</td>
+									</tr>
+									{% endfor %}
+								</table>
 
-							<div class="course_author_name"> {{ rs.amount }} <span>Adet Kaldı</span></div>
-							<div class="course_price d-flex flex-column align-items-center justify-content-center"><span></span></div>
-						</div>
-					</div>
-				</div>
 
-			{% endfor %}
 
 
 					</div>

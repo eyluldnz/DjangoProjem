@@ -8,6 +8,7 @@
 				<div class="logo">
 					<img src="static/images/logo.png" alt="">
 					<h5>Kütüphane Otamasyon </h5>
+
 				</div>
 			</div>
 
@@ -22,6 +23,11 @@
 
 						<li class="main_nav_item"><a href="/contact">İletişim</a></li>
 					</ul>
+					<form class="form-inline my-2 my-lg-0" action="/search/" method="post">
+						{% csrf_token %}
+						<input style="width:400px;" class="form-control mr-sm-2" type="search" placeholder="Ara" name="query">
+     					 <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Ara</button>
+   					 </form>
 				</div>
 			</nav>
 		</div>

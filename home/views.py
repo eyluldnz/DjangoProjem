@@ -4,6 +4,7 @@ from django.contrib import  messages
 
 # Create your views here.
 from book.models import Book, Category, Images, Comment
+from home.forms import SearchFormu
 from home.models import Setting, ContactFormMessage, ContactFormu
 
 
@@ -70,3 +71,16 @@ def book_detail(request,id):
                }
 
     return render(request, 'kitapdetay.html',context)
+
+def book_search(request):
+    if request.method == 'POST':
+        form = SearchFormu(request.POST)
+        if form.is_valid():
+            category=Category.objects.all()
+            query = form.cleaned_data['query']
+            books=Book.objects.filter(title__icontains=query)
+            context= {'books': books , 'category': category, 'query': query }
+            return render(request,'book_search.html',context)
+
+        return HttpResponseRedirect('/')
+
