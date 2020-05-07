@@ -1,6 +1,9 @@
+import json
+
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib import  messages
+import _json
 
 # Create your views here.
 from book.models import Book, Category, Images, Comment
@@ -83,4 +86,26 @@ def book_search(request):
             return render(request,'book_search.html',context)
 
         return HttpResponseRedirect('/')
+
+
+def book_search_auto(request):
+
+         if request.is_ajax():
+
+             q = request.GET.get('term', '')
+             book = Book.objects.filter(title__icontains=q)
+             results = []
+             for pk in book:
+                 book_json = {}
+                 book_json = pk.title
+                 results.append(book_json)
+
+             data = json.dumps(results)
+
+         else:
+             data = 'fail'
+
+         mimetype = 'application/json'
+         return HttpResponse(data, mimetype)
+
 

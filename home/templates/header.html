@@ -1,6 +1,22 @@
 
-	<!-- Header -->
+{% load static %}
 
+<script>
+		$(function() {
+   		 $("#query").autocomplete({
+      		source: "/search_auto/",
+      		select: function (event, ui) { //item selected
+        		AutoCompleteSelectHandler(event, ui)
+      },
+      minLength: 2,
+    });
+  });
+
+  		function AutoCompleteSelectHandler(event, ui)
+ 		 {
+   			 var selectedObj = ui.item;
+  		}
+	</script>
 	<header class="header d-flex flex-row">
 		<div class="header_content d-flex flex-row align-items-center">
 			<!-- Logo -->
@@ -25,7 +41,7 @@
 					</ul>
 					<form class="form-inline my-2 my-lg-0" action="/search/" method="post">
 						{% csrf_token %}
-						<input style="width:400px;" class="form-control mr-sm-2" type="search" placeholder="Ara" name="query">
+						<input id="query" style="width:400px;" class="form-control mr-sm-2" type="search" placeholder="Ara" name="query">
      					 <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Ara</button>
    					 </form>
 				</div>
@@ -44,5 +60,6 @@
 		</div>
 
 	</header>
+
 
 

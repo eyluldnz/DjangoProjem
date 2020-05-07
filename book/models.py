@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.forms import ModelForm
+from django.urls import reverse
 from django.utils.safestring import mark_safe
 from ckeditor_uploader.fields import RichTextUploadingField
 from mptt.models import MPTTModel, TreeForeignKey
@@ -17,7 +18,7 @@ class Category(MPTTModel):
     image = models.ImageField(blank=True,upload_to='images/')
     status = models.CharField(max_length=10,choices=STATUS)
 
-    slug = models.SlugField()
+    slug = models.SlugField(null=False,unique=True)
     parent= TreeForeignKey('self', blank=True,null=True,  related_name='children', on_delete=models.CASCADE)
 
     created_at = models.DateTimeField(auto_now_add=True)
@@ -33,6 +34,8 @@ class Category(MPTTModel):
                full_path.append(k.title)
                k=k.parent
           return '->'.join(full_path[::-1])
+    def get_absolute_url(self):
+        return  reverse('category_detail', kwargs={'slug':self.slug})
 
 
 
@@ -54,6 +57,7 @@ class Book(models.Model):
     status = models.CharField(max_length=10, choices=STATUS)
     amount = models.IntegerField()
 
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -63,6 +67,10 @@ class Book(models.Model):
     def image_tag(self):
         return mark_safe('<image src="{}" height="50"/>'.format(self.image.url))
     image_tag.short_description = 'Image'
+
+    def get_absolute_url(self):
+        return  reverse('category_detail', kwargs={'slug':self.slug})
+
 
 
 
