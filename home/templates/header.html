@@ -47,9 +47,44 @@
 				</div>
 			</nav>
 		</div>
-		<div class="header_side d-flex flex-row justify-content-center align-items-center">
 
-		</div>
+			<div class="header_side d-flex flex-row justify-content-center align-items-center">
+				{% if user.id is not None %}
+				<ul class="sidebar_list">
+
+
+
+										<li class="dropdown">
+											<button type="button" class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+													<span style="color:white;"> {{ user.first_name }} &nbsp;&nbsp; </span> </button>
+												<div class="dropdown-menu" style="background:orange;">
+													<div class="btn-group dropleft">
+														<div class="col-lg-10" >
+
+																<ul class="children" >
+																	<li> <a href="#"> <span> Hesabım </span> </a></li>
+																	<li> <a href="#"> <span> Şiparişlerim </span> </a></li>
+																	<li> <a href="/logout"> <span> Çıkış </span> </a></li>
+																</ul>
+
+														</div>
+													</div>
+												</div>
+											<button type="button" class="btn"  aria-haspopup="true" aria-expanded="false" >
+													<span style="color:white;"> Sepetim </span> </button>
+										</li>
+
+
+							</ul>
+
+
+				{% else %}
+					<a href="/login"><span style="color:white;">Giriş | </span></a>
+					<a href="/join"><span style="color:white;">| Join</span></a>
+
+			</div>
+			{% endif %}
+
 
 
 
@@ -57,6 +92,7 @@
 		<!-- Hamburger -->
 		<div class="hamburger_container">
 			<i class="fas fa-bars trans_200"></i>
+
 		</div>
 
 	</header>

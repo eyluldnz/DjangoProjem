@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="697c9127-f8fb-4a97-b6d1-59d00c48fd63" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/home/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/urls.py" afterDir="false" />
     </list>
@@ -149,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588809262144</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="21-22. videolar yapıldı">
+      <created>1588874986888</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1588874986888</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -160,7 +164,8 @@
     <MESSAGE value="18.video yapıldı" />
     <MESSAGE value="19.video yapıldı" />
     <MESSAGE value="20. video arama butonu eklendi" />
-    <option name="LAST_COMMIT_MESSAGE" value="20. video arama butonu eklendi" />
+    <MESSAGE value="21-22. videolar yapıldı" />
+    <option name="LAST_COMMIT_MESSAGE" value="21-22. videolar yapıldı" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Inspections" timestamp="1586211560712">
@@ -171,10 +176,10 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="442" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.736@0.0.1366.736" timestamp="1586701708420" />
-    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1588809260320">
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1588874984097">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1588809260320" />
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1588874984097" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1585167724893">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
@@ -195,18 +200,18 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state width="1345" height="183" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1585409231649" />
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1588809286838">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1588874991563">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1588809286838" />
-    <state x="735" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1588871258810">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1588874991563" />
+    <state x="735" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1588880165020">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="735" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.736@0.0.1366.736" timestamp="1588871258810" />
-    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588874955091">
+    <state x="735" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.736@0.0.1366.736" timestamp="1588880165020" />
+    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588884663575">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.736@0.0.1366.736" timestamp="1588874955091" />
+    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.736@0.0.1366.736" timestamp="1588884663575" />
     <state x="397" y="159" key="git4idea.merge.GitPullDialog" timestamp="1588793978626">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
