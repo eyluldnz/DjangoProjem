@@ -1,0 +1,89 @@
+ {% extends "homebase.html" %}
+
+ {% block title %} Kayıt Ol {{ setting.company }} {% endblock %}
+ {% block keywords %} {{ setting.keywords }} {% endblock %}
+ {% block description %} {{ setting.description}} {% endblock %}
+ {% block head %}
+     <link rel='shortcut icon' type="image/x-icon" href="{{ setting.icon.url}} " />
+ {% endblock %}
+
+
+ {% block body %}
+ {% load static %}
+ <div class="hero_slider_container">
+			<div class="hero_slider owl-carousel">
+
+				<!-- Hero Slide -->
+				<div class="hero_slide">
+					<div class="hero_slide_background" style="background-image:url({% static 'images/course_5.jpg' %})"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<div class="hero_slide_content text-center">
+							<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut"> ÜYE GİRİŞ
+						</div>
+					</div>
+				</div>
+            </div>
+ </div>
+
+
+	<div class="popular page_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1></h1>
+					</div>
+				</div>
+			</div>
+            <div>
+				<div class="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+
+					<!-- Contact Form -->
+					<div class="contact_form">
+						<div class="contact_title"><h3>Kayıt Ol </h3></div>
+						<div class="contact_form_container">
+							{% if messages %}
+								{% for message in messages %}
+									<div class="alert alert-{{message.tags}}" role="alert">
+										{{ message }}
+									</div>
+								{% endfor %}
+							{% endif %}
+							<form  method="post">
+							{% csrf_token %}
+							{% for field in form %}
+								<p>
+									{{ field.label_tag}} <br>
+									{{ field }}
+									{% if field.help_text %}
+										<small style="color:grey"> {{ field.help_text }}</small>
+									{% endif %}
+									{% for error in field.error %}
+										<p style="color:red"> {{ error }} </p>
+									{% endfor %}
+							</p>
+								{% endfor %}
+							<input class="contact_send_btn trans_200" type="submit" value="Gönder">
+						</form>
+
+
+
+					</div>
+					</div>
+				</div>
+
+
+				</div>
+
+
+        </div>
+    </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+ {% endblock %}
