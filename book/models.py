@@ -35,7 +35,7 @@ class Category(MPTTModel):
                k=k.parent
           return '->'.join(full_path[::-1])
     def get_absolute_url(self):
-        return  reverse('category_detail', kwargs={'slug':self.slug})
+        return  reverse('category_detail', kwargs={'slug': self.slug})
 
 
 
@@ -56,8 +56,6 @@ class Book(models.Model):
     detail = RichTextUploadingField()
     status = models.CharField(max_length=10, choices=STATUS)
     amount = models.IntegerField()
-
-
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -68,8 +66,7 @@ class Book(models.Model):
         return mark_safe('<image src="{}" height="50"/>'.format(self.image.url))
     image_tag.short_description = 'Image'
 
-    def get_absolute_url(self):
-        return  reverse('category_detail', kwargs={'slug':self.slug})
+
 
 
 
