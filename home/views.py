@@ -9,7 +9,7 @@ import _json
 # Create your views here.
 from book.models import Book, Category, Images, Comment
 from home.forms import SearchFormu, KayıtFormu
-from home.models import Setting, ContactFormMessage, ContactFormu
+from home.models import Setting, ContactFormMessage, ContactFormu, UserProfil
 
 
 def index(request):
@@ -132,6 +132,7 @@ def login_view(request):
     context = {'category': category}
     return render(request, 'login.html', context)
 
+
 def join_view(request):
     if request.method == 'POST':
         form=KayıtFormu(request.POST)
@@ -141,6 +142,11 @@ def join_view(request):
             password = request.POST['password1']
             user = authenticate(request, username=username, password=password)
             login(request, user)
+            current_user = request.user
+            data = UserProfil()
+            data.user_id = current_user.id
+            data.image = "images/users/user.png"
+            data.save()
             return HttpResponseRedirect('/')
 
     form= KayıtFormu()

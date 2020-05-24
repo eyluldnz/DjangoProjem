@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 
 
 class SearchFormu(forms.Form):
+
     query=forms.CharField(label='search', max_length=100)
 
 class KayıtFormu(UserCreationForm):
