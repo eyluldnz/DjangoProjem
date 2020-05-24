@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="697c9127-f8fb-4a97-b6d1-59d00c48fd63" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/book/migrations/0012_remove_book_slug.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/Templates/user_panel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/Templates/user_profil.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myproject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -43,10 +45,12 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/user/Templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Django\myproject\user\Templates" />
+      <recent name="C:\Django\myproject\user" />
       <recent name="C:\Django\myproject\home\templates" />
       <recent name="C:\Django\myproject\book" />
     </key>
@@ -167,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588889822701</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary=" Üye Bilgi formu ve resim eklendi(25.video )">
+      <created>1588894379726</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1588894379726</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -181,21 +192,22 @@
     <MESSAGE value="21-22. videolar yapıldı" />
     <MESSAGE value="23. videolar yapıldı" />
     <MESSAGE value="24. Video Üye Kayıt Formu yapıldı" />
-    <option name="LAST_COMMIT_MESSAGE" value="24. Video Üye Kayıt Formu yapıldı" />
+    <MESSAGE value=" Üye Bilgi formu ve resim eklendi(25.video )" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Üye Bilgi formu ve resim eklendi(25.video )" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Inspections" timestamp="1586211560712">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="275" y="26" key="#Inspections/0.0.1366.736@0.0.1366.736" timestamp="1586211560712" />
-    <state x="442" y="171" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586701708420">
+    <state x="442" y="171" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590331425221">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="442" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.736@0.0.1366.736" timestamp="1586701708420" />
-    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1588889821075">
+    <state x="442" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.736@0.0.1366.736" timestamp="1590331425221" />
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1588894390185">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1588889821075" />
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1588894390185" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1585167724893">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
@@ -216,18 +228,18 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state width="1345" height="183" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1585409231649" />
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1588889827397">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1588894396849">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1588889827397" />
-    <state x="735" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1588880165020">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1588894396849" />
+    <state x="735" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1590328577764">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="735" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.736@0.0.1366.736" timestamp="1588880165020" />
-    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588894315601">
+    <state x="735" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.736@0.0.1366.736" timestamp="1590328577764" />
+    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590337881100">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.736@0.0.1366.736" timestamp="1588894315601" />
+    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.736@0.0.1366.736" timestamp="1590337881100" />
     <state x="397" y="159" key="git4idea.merge.GitPullDialog" timestamp="1588793978626">
       <screen x="0" y="0" width="1366" height="736" />
     </state>

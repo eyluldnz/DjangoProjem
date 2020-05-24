@@ -55,8 +55,11 @@
 
 
 										<li class="dropdown">
+											<img src="{{ request.user.profile.image.url}}">
 											<button type="button" class="btn dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-													<span style="color:white;"> {{ user.first_name }} &nbsp;&nbsp; </span> </button>
+													<span style="color:white;"> {{ user.first_name }} &nbsp;&nbsp; </span>
+											</button>
+
 												<div class="dropdown-menu" style="background:orange;">
 													<div class="btn-group dropleft">
 														<div class="col-lg-10" >
@@ -70,6 +73,7 @@
 														</div>
 													</div>
 												</div>
+
 											<button type="button" class="btn"  aria-haspopup="true" aria-expanded="false" >
 													<span style="color:white;"> Sepetim </span> </button>
 										</li>

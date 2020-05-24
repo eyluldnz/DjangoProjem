@@ -1,0 +1,93 @@
+ {% extends "homebase.html" %}
+
+ {% block title %} {{profil.user_name}} {% endblock %}
+ {% block keywords %} {{ setting.keywords }} {% endblock %}
+ {% block description %} {{ setting.description}} {% endblock %}
+ {% block head %}
+     <link rel='shortcut icon' type="image/x-icon" href="{{ setting.icon.url}} " />
+ {% endblock %}
+
+
+ {% block body %}
+ {% load static %}
+ <div class="hero_slider_container">
+			<div class="hero_slider owl-carousel">
+
+				<!-- Hero Slide -->
+				<div class="hero_slide" style="height:450px;">
+					<div class="hero_slide_background" style="background:orange;"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<h1 style="color:white;" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Kullanıcı Profili</h1>
+
+					</div>
+				</div>
+            </div>
+ </div>
+
+
+ <div class="popular page_section">
+	 <div class="container">
+	 <div class="contact">
+		 <div class="container">
+			 <div class="row">
+				 <div class="col-md-3">
+
+					 <h4>Kullanıcı Paneli </h4>
+					 {% include "user_panel.html" %}
+
+				 </div>
+
+
+				 <div class="col-md-7">
+
+					 <h4>Kullanıcı Bilgileri</h4>
+					 <table class="table table-striped table-light">
+						 <thead>
+						 <tr>
+							 <th scope="col"></th>
+							 <td scope="col"><img src="{{profil.image.url}}" width="70" height="70"></td>
+						 </tr>
+						 <tr>
+							 <th scope="col">Ad</th>
+							 <td> {{ profil.user.first_name}}</td>
+						 </tr>
+						 <tr>
+							 <th scope="col">Soyad</th> <td> {{ profil.user.last_name}}</td>
+						 </tr>
+						 <tr>
+							 <th scope="col">Email</th> <td> {{ profil.user.email}}</td>
+						 </tr>
+						 <tr>
+							 <th scope="col">Tel</th> <td> {{ profil.phone}}</td>
+						 </tr>
+						 <tr>
+							 <th scope="col">Adres</th> <td> {{ profil.adress}}</td>
+						 </tr>
+						 <tr>
+							 <th scope="col">Şehir</th> <td> {{ profil.city}}</td>
+						 </tr>
+						 </tr>
+						 </thead>
+						 <tbody>
+
+
+						 </tbody>
+					 </table>
+				 </div>
+
+
+
+
+				 </div>
+			 </div>
+
+		 </div>
+	 </div>
+
+
+ </div>
+ </div>
+ </div>
+
+
+ {% endblock %}
