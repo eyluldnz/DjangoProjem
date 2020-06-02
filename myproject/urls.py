@@ -19,6 +19,7 @@ from django.contrib import admin
 from django.urls import path,include
 
 from home import views
+from order import views as orderviews
 
 urlpatterns = [
     path('', include('home.urls')),
@@ -37,6 +38,8 @@ urlpatterns = [
     path('login/', views.login_view, name='login_view'),
     path('join/', views.join_view, name='join_view'),
     path('user/', include('user.urls')),
+    path('order/', include('order.urls')),
+    path('loancart/', orderviews.loancart, name='loancart'),
 
 
 ]

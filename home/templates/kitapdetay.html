@@ -74,13 +74,21 @@
 						<h5>Yazar: {{book.author}}</h5>
 						<h5>Yıl: {{book.dates}}</h5>
 					<br>
-
+						<form action="/order/addtocart/{{ book.id }}" method="post">
+							{% csrf_token %}
+							<div class="row">
+								<div  >
+									<input type="date" id="startdate" name="startdate" value="2020-06-01" min="2020-06-01" max="2020-12-31"></div>
+								<div >
+									<input type="date" id="finishdate" name="finishdate" value="2020-06-01" min="2020-06-01" max="2020-12-31"> </div>
+							</div>
 						<div class="row">
-							<div class="col-lg-7"> <input style="margin-top:8px" class="input" type="number" min="0" max="{{book.amount}}" ></div>
+							<div class="col-lg-7"> <input style="margin-top:8px" name="quantity" class="input" type="number" min="0" max="{{book.amount}}" ></div>
 							<br>
-					        <div class="col-lg-4"> <button type="button" class="btn btn-outline-warning" >Sepete Ekle</button></div>
-                       </div>
 
+					        <div class="col-lg-4"> <button type="submit" class="btn btn-outline-warning" >Sepete Ekle</button></div>
+                      	 </div>
+						</form>
 
 				</div>
 

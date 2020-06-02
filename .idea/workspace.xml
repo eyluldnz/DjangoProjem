@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="697c9127-f8fb-4a97-b6d1-59d00c48fd63" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/order/Templates/Loancart_book.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/book_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/book_search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/join.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/join.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/kitapdetay.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/kitapdetay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myproject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,17 +46,39 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/user/Templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/order/Templates" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Django\myproject\order\Templates" />
+      <recent name="C:\Django\myproject\order" />
+      <recent name="C:\Django\order" />
       <recent name="C:\Django\myproject\user\Templates" />
       <recent name="C:\Django\myproject\user" />
-      <recent name="C:\Django\myproject\home\templates" />
-      <recent name="C:\Django\myproject\book" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.admin">
+    <configuration name="admin" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="myproject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/order" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/order/admin.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="urls" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="myproject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,6 +102,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.admin" />
         <item itemvalue="Python.urls" />
       </list>
     </recent_temporary>
@@ -185,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590337911079</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="26.5 yapıldı">
+      <created>1590350611846</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1590350611846</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -201,7 +232,8 @@
     <MESSAGE value="24. Video Üye Kayıt Formu yapıldı" />
     <MESSAGE value=" Üye Bilgi formu ve resim eklendi(25.video )" />
     <MESSAGE value="(26.video )" />
-    <option name="LAST_COMMIT_MESSAGE" value="(26.video )" />
+    <MESSAGE value="26.5 yapıldı" />
+    <option name="LAST_COMMIT_MESSAGE" value="26.5 yapıldı" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Inspections" timestamp="1586211560712">
@@ -212,42 +244,42 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="442" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.736@0.0.1366.736" timestamp="1590331425221" />
-    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1590337908210">
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1590350610023">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1590337908210" />
-    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1585167724893">
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1590350610023" />
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1591111039121">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.736@0.0.1366.736" timestamp="1585167724893" />
-    <state width="1345" height="183" key="GridCell.Tab.0.bottom" timestamp="1585409231650">
+    <state x="463" y="123" key="FileChooserDialogImpl/0.0.1366.736@0.0.1366.736" timestamp="1591111039121" />
+    <state width="1345" height="183" key="GridCell.Tab.0.bottom" timestamp="1591114887306">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state width="1345" height="183" key="GridCell.Tab.0.bottom/0.0.1366.736@0.0.1366.736" timestamp="1585409231650" />
-    <state width="1345" height="183" key="GridCell.Tab.0.center" timestamp="1585409231649">
+    <state width="1345" height="183" key="GridCell.Tab.0.bottom/0.0.1366.736@0.0.1366.736" timestamp="1591114887306" />
+    <state width="1345" height="183" key="GridCell.Tab.0.center" timestamp="1591114887305">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state width="1345" height="183" key="GridCell.Tab.0.center/0.0.1366.736@0.0.1366.736" timestamp="1585409231649" />
-    <state width="1345" height="183" key="GridCell.Tab.0.left" timestamp="1585409231649">
+    <state width="1345" height="183" key="GridCell.Tab.0.center/0.0.1366.736@0.0.1366.736" timestamp="1591114887305" />
+    <state width="1345" height="183" key="GridCell.Tab.0.left" timestamp="1591114887304">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state width="1345" height="183" key="GridCell.Tab.0.left/0.0.1366.736@0.0.1366.736" timestamp="1585409231649" />
-    <state width="1345" height="183" key="GridCell.Tab.0.right" timestamp="1585409231649">
+    <state width="1345" height="183" key="GridCell.Tab.0.left/0.0.1366.736@0.0.1366.736" timestamp="1591114887304" />
+    <state width="1345" height="183" key="GridCell.Tab.0.right" timestamp="1591114887305">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state width="1345" height="183" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1585409231649" />
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1590337920282">
+    <state width="1345" height="183" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1591114887305" />
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1590350617705">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1590337920282" />
-    <state x="735" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1590328577764">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1590350617705" />
+    <state x="735" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1591110497220">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="735" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.736@0.0.1366.736" timestamp="1590328577764" />
-    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590350561184">
+    <state x="735" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.736@0.0.1366.736" timestamp="1591110497220" />
+    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591120087075">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.736@0.0.1366.736" timestamp="1590350561184" />
+    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.736@0.0.1366.736" timestamp="1591120087075" />
     <state x="397" y="159" key="git4idea.merge.GitPullDialog" timestamp="1588793978626">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
