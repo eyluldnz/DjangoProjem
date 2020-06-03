@@ -16,9 +16,12 @@ def index(request):
     setting =Setting.objects.get(pk=1)
     sliderdata=Book.objects.all()[:4]
     category= Category.objects.all()
+    current_user = request.user
+    profil = UserProfil.objects.get(user_id=current_user.id)
     context = {'setting': setting, 'page': 'home',
                'category':category,
-               'sliderdata': sliderdata}
+               'sliderdata': sliderdata,
+               'profil': profil}
     return render(request,'index.html',context)
 
 def about(request):
@@ -75,6 +78,7 @@ def book_detail(request,id):
                }
 
     return render(request, 'kitapdetay.html',context)
+
 
 def book_search(request):
     if request.method == 'POST':

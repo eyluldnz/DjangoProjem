@@ -1,0 +1,114 @@
+{% extends "homebase.html" %}
+
+ {% block title %} {{profil.user_name}} {% endblock %}
+ {% block keywords %} {{ setting.keywords }} {% endblock %}
+ {% block description %} {{ setting.description}} {% endblock %}
+ {% block head %}
+     <link rel='shortcut icon' type="image/x-icon" href="{{ setting.icon.url}} " />
+ {% endblock %}
+
+
+ {% block body %}
+ {% load static %}
+ <div class="hero_slider_container">
+			<div class="hero_slider owl-carousel">
+
+				<!-- Hero Slide -->
+				<div class="hero_slide" style="height:450px;">
+					<div class="hero_slide_background" style="background:orange;"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<h1 style="color:white;" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Kitap Ödünç Alma </h1>
+
+					</div>
+				</div>
+            </div>
+ </div>
+
+
+	<div class="popular page_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+						<h1></h1>
+					</div>
+				</div>
+			</div>
+            <div>
+				<div class="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+
+					<!-- Contact Form -->
+					<div class="contact_form">
+						<div class="contact_title"><h3></h3></div>
+						<div class="contact_form_container">
+
+						{% if messages %}
+							{% for message in messages %}
+								<div class="alert alert-{{message.tags}}" role="alert">
+									{{ message }}
+								</div>
+							{% endfor %}
+						{% endif %}
+						<form action="" method="post">
+							{% csrf_token %}
+							<p> <label for="id_first_name">Ad:</label> </p> <input type="text" name="first_name" value="{{ user.first_name }} " class="input" id="id_first_name">
+							<p> <label for="id_last_name">Soyad:</label> </p> <input type="text" name="last_name" value="{{ user.last_name }} " class="input" id="id_last_name">
+							<p> <label for="id_adres">Adres:</label> </p> <input type="text" name="adres" value="{{ profil.adres }} " class="input" id="id_adres">
+							<p> <label for="id_phone">Tel:</label> </p> <input type="text" name="phone" value="{{ profil.phone }} " class="input" id="id_phone">
+							<p> <label for="id_sehir">Şehir:</label> </p> <input type="text" name="city" value="{{ profil.city}} " class="input" id="id_sehir">
+
+							<input class="btn btn-warning" type="submit" value="Tamamla">
+						</form>
+
+					</div>
+					</div>
+				</div>
+       		 </div>
+			<div class="col-lg-12">
+				<div class="row course_boxes"> <h4> Ödünç Alma Özeti </h4> </hr>
+						<table cellpadding="3" width="1000">
+							<tr>
+								<th class="text-center">#</th>
+								<th class="text-center">Kitap</th>
+								<th class="text-center">Adet</th>
+								<th></th>
+								<th class="text-center">Alma Tarihi </th>
+								<th></th>
+
+								<th class="text-center">İade Tarihi </th>
+
+
+
+							</tr>
+
+							{% for rs in lcart %}
+							<tr> <br>
+								<td>  <img src="{{ rs.book.image.url }}" style="height:100px; width:80px; margin-top:10px;"> </td>
+								<td> {{ rs.book }} </td>
+								<td class="text-center"> {{ rs.quantity}}</td>
+								<td></td>
+								<td class="text-center"> {{ rs.startdate}}</td>
+								<td></td>
+								<td class="text-center"> {{ rs.finishdate}}</td>
+
+
+							</tr>
+							{% endfor %}
+						</table>
+					<br>
+					</hr>
+
+			</div>
+
+    </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}

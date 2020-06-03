@@ -1,0 +1,54 @@
+{% extends "homebase.html" %}
+
+ {% block title %} {{profil.user_name}} {% endblock %}
+ {% block keywords %} {{ setting.keywords }} {% endblock %}
+ {% block description %} {{ setting.description}} {% endblock %}
+ {% block head %}
+     <link rel='shortcut icon' type="image/x-icon" href="{{ setting.icon.url}} " />
+ {% endblock %}
+
+
+ {% block body %}
+ {% load static %}
+ <div class="hero_slider_container">
+			<div class="hero_slider owl-carousel">
+
+				<!-- Hero Slide -->
+				<div class="hero_slide" style="height:450px;">
+					<div class="hero_slide_background" style="background:orange;"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<h1 style="color:white;" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Kitap Ödünç Alma </h1>
+
+					</div>
+				</div>
+            </div>
+ </div>
+
+
+	<div class="popular page_section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title text-center">
+
+					</div>
+				</div>
+			</div>
+            <div>
+				<div class="contact">
+		<div class="container">
+			<h4> Sevgili {{ user }}.</h4> <h4>Ödünç alma işleminiz tamamlanmıştır. Teşekkürler ..</h4>
+			<br>
+			<h3> Ödünç Alma Kodu: {{ ordercode }}</h3>
+
+			</div>
+
+    </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+{% endblock %}
