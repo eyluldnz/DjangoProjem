@@ -58,15 +58,17 @@ def contact(request):
 
 def category_books(request,id, slug):
     category = Category.objects.all()
+    profil = UserProfil.objects.get(user_id=request.user.id)
     categorydata=Category.objects.get(pk=id)
     books = Book.objects.filter(category_id=id)
     context = {'books': books,
                'category': category,
-               'categorydata': categorydata}
+               'categorydata': categorydata,'profil':profil,}
 
     return render(request, 'kitaplar.html', context)
 
 def book_detail(request,id):
+    profil = UserProfil.objects.get(user_id=request.user.id)
     category = Category.objects.all()
     book = Book.objects.get(pk=id)
     images=Images.objects.filter(book_id=id)
@@ -74,20 +76,22 @@ def book_detail(request,id):
     context = { 'book':book,
                'category': category,
                 'images': images,
-                'comments': comments
+                'comments': comments,
+                'profil': profil,
                }
 
     return render(request, 'kitapdetay.html',context)
 
 
 def book_search(request):
+    profil = UserProfil.objects.get(user_id=request.user.id)
     if request.method == 'POST':
         form = SearchFormu(request.POST)
         if form.is_valid():
             category=Category.objects.all()
             query = form.cleaned_data['query']
             books=Book.objects.filter(title__icontains=query)
-            context= {'books': books , 'category': category, 'query': query }
+            context= {'books': books , 'category': category, 'query': query,'profil':profil,  }
             return render(request,'book_search.html',context)
 
         return HttpResponseRedirect('/')

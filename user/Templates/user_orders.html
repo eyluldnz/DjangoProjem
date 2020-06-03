@@ -1,0 +1,90 @@
+ {% extends "homebase.html" %}
+
+ {% block title %} {{profil.user_name}} Orders List {% endblock %}
+ {% block keywords %} {{ setting.keywords }} {% endblock %}
+ {% block description %} {{ setting.description}} {% endblock %}
+ {% block head %}
+     <link rel='shortcut icon' type="image/x-icon" href="{{ setting.icon.url}} " />
+ {% endblock %}
+
+
+ {% block body %}
+ {% load static %}
+ <div class="hero_slider_container">
+			<div class="hero_slider owl-carousel">
+
+				<!-- Hero Slide -->
+				<div class="hero_slide" style="height:450px;">
+					<div class="hero_slide_background" style="background:orange;"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<h1 style="color:white;" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Siparişlerim </h1>
+
+					</div>
+				</div>
+            </div>
+ </div>
+
+
+ <div class="popular page_section">
+	 <div class="container">
+	 <div class="contact">
+		 <div class="container">
+			 <div class="row">
+				 <div class="col-md-3">
+
+					 <h4>Kullanıcı Paneli  </h4>
+					 {% include "user_panel.html" %}
+
+				 </div>
+
+
+				 <div class="col-md-8">
+
+					 <h4>Geçmiş Şipariş Listesi </h4>
+
+
+					 </table>
+					 <table cellpadding="3" width="1000">
+						 <tr>
+							 <th class="text-center">Id </th>
+							 <th class="text-center">Ad: </th>
+							 <th class="text-center">Soyad:</th>
+							 <th class="text-center">Toplam:</th>
+							 <th class="text-center">Status:</th>
+							 <th class="text-center">Sipariş Tarih:</th>
+							 <th class="text-center"> Detay </th>
+							 <th></th>
+
+						 </tr>
+						 {% for rs in orders %}
+						 <tr> <br>
+
+							 <td class="text-center"> {{ rs.id }}</td>
+							 <td class="text-center"> {{ rs.first_name}}</td>
+							 <td class="text-center"> {{ rs.last_name}}</td>
+							 <td class="text-center"> {{ rs.totalbook }}</td>
+							 <td class="text-center"> {{ rs.status }}</td>
+							 <td class="text-center"> {{ rs.created_at }}</td>
+							 <td class="text-center"> <a href="/user/orderdetail/{{ rs.id }}" class="btn btn-success"> Detay </a> </td>
+						 </tr>
+
+						 {% endfor %}
+					 </table>
+				 </div>
+
+
+
+
+				 </div>
+			 </div>
+
+		 </div>
+	 </div>
+
+
+ </div>
+ </div>
+ </div>
+
+
+ {% endblock %}

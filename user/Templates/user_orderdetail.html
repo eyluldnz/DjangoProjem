@@ -1,0 +1,90 @@
+ {% extends "homebase.html" %}
+
+ {% block title %} {{profil.user_name}} Order List {% endblock %}
+ {% block keywords %} {{ setting.keywords }} {% endblock %}
+ {% block description %} {{ setting.description}} {% endblock %}
+ {% block head %}
+     <link rel='shortcut icon' type="image/x-icon" href="{{ setting.icon.url}} " />
+ {% endblock %}
+
+
+ {% block body %}
+ {% load static %}
+ <div class="hero_slider_container">
+			<div class="hero_slider owl-carousel">
+
+				<!-- Hero Slide -->
+				<div class="hero_slide" style="height:450px;">
+					<div class="hero_slide_background" style="background:orange;"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<h1 style="color:white;" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Siparişlerim </h1>
+
+					</div>
+				</div>
+            </div>
+ </div>
+
+
+ <div class="popular page_section">
+	 <div class="container">
+	 <div class="contact">
+		 <div class="container">
+			 <div class="row">
+				 <div class="col-md-3">
+
+					 <h4> Kullanıcı Paneli </h4>
+					 {% include "user_panel.html" %}
+
+				 </div>
+
+
+				 <div class="col-md-8">
+
+					 <h4> Şipariş Detayı </h4>
+
+					 <p style="color:black;"> Sipariş Kodu:<span> {{ order.code }}</span></p>
+					 </table>
+					 <table cellpadding="3" width="1000">
+						 <tr>
+							 <th class="text-center"># </th>
+							 <th class="text-center">Kullanıcı</th>
+							<th class="text-center">Kitap</th>
+							 <th class="text-center"> Toplam</th>
+							 <th class="text-center"> Durum</th>
+							 <th class="text-center">Alış Tarih </th>
+							 <th class="text-center">İade Tarihi</th>
+							 <th></th>
+
+						 </tr>
+
+						 {% for rs in orderitem %}
+						 <tr> <br>
+							 <td class="text-center">  <a href="/book/{{ rs.book_id}}" ><img src="{{ rs.book.image.url}}" style="height:150px; width: 100px;"> </a> </td>
+							 <td class="text-center"> {{ rs.user.first_name }}</td>
+							 <td class="text-center"> {{ rs.book.title}}</td>
+							 <td class="text-center"> {{ rs.quantity }}</td>
+							 <td class="text-center"> {{ rs.status }}</td>
+							 <td class="text-center"> {{ rs.startdate}}</td>
+							 <td class="text-center"> {{ rs.finishdate}} </td>
+						 </tr>
+
+						 {% endfor %}
+					 </table>
+				 </div>
+
+
+
+
+				 </div>
+			 </div>
+
+		 </div>
+	 </div>
+
+
+ </div>
+ </div>
+ </div>
+
+
+ {% endblock %}

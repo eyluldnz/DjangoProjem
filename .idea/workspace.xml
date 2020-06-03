@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="697c9127-f8fb-4a97-b6d1-59d00c48fd63" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/order/Templates/Order_completed.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order/Templates/Order_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/Templates/change_password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/Templates/user_update.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/Templates/user_comments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/Templates/user_orderdetail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/Templates/user_orders.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/Templates/Loancart_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/Templates/Loancart_book.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/order/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/Templates/user_profil.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/Templates/user_profil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/Templates/user_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/Templates/user_panel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -227,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591120115123</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="30*31.video yapıldı">
+      <created>1591143184672</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1591143184672</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -245,7 +248,8 @@
     <MESSAGE value="(26.video )" />
     <MESSAGE value="26.5 yapıldı" />
     <MESSAGE value="28.video yapıldı" />
-    <option name="LAST_COMMIT_MESSAGE" value="28.video yapıldı" />
+    <MESSAGE value="30*31.video yapıldı" />
+    <option name="LAST_COMMIT_MESSAGE" value="30*31.video yapıldı" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Inspections" timestamp="1586211560712">
@@ -256,10 +260,10 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="442" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.736@0.0.1366.736" timestamp="1590331425221" />
-    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1591120112259">
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1591143180554">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1591120112259" />
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1591143180554" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1591111039121">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
@@ -280,18 +284,18 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state width="1345" height="183" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1591121087749" />
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1591120122832">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1591143190177">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1591120122832" />
-    <state x="735" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1591122304941">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1591143190177" />
+    <state x="735" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1591212851915">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="735" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.736@0.0.1366.736" timestamp="1591122304941" />
-    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591143151530">
+    <state x="735" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.736@0.0.1366.736" timestamp="1591212851915" />
+    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591227241856">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.736@0.0.1366.736" timestamp="1591143151530" />
+    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.736@0.0.1366.736" timestamp="1591227241856" />
     <state x="397" y="159" key="git4idea.merge.GitPullDialog" timestamp="1588793978626">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
