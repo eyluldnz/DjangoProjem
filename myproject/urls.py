@@ -39,7 +39,11 @@ urlpatterns = [
     path('join/', views.join_view, name='join_view'),
     path('user/', include('user.urls')),
     path('order/', include('order.urls')),
+    path('content/', include('content.urls')),
     path('loancart/', orderviews.loancart, name='loancart'),
+    path('menu/<int:id>', views.menu, name='menu'),
+    path('content/<int:id>/<slug:slug>/', views.contentdetail, name='contentdetail'),
+
 
 
 ]

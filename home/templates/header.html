@@ -33,16 +33,45 @@
 				<div class="main_nav">
 					<ul class="main_nav_list">
 						<li class="main_nav_item"><a href="/">Anasayfa</a></li>
-						<li class="main_nav_item"><a href="/about">Hakkımızda</a></li>
+						<li class="main_nav_item"><a href="/">Hakkımızda</a></li>
+						{% if menu  %}
+						{% load mptt_tags %}
+						{% recursetree menu %}
+						<li class="main_nav_item dropdown ">
+							<button type="button"  style="margin-bottom:4px;" class="btn dropdown" {% if not node.is_leaf_node %} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {% endif %}> <a href="/menu/{{ node.id }}">
+													<span style="font-family: 'Open Sans', sans-serif;font-size: 14px;text-transform: uppercase;font-weight: 700;color: #3a3a3a;">	{{ node.title}} </span> </a></button>
+
+
+
+														<div class="dropdown-menu">
+													<div class="btn-group droprightt">
+														<div class="col-lg-10">
+
+															{% if not node.is_leaf_node %}
+																<ul class="children">
+																	<li> <span> {{ children }}</span> </li>
+																</ul>
+          										  			{% endif %}
+														</div>
+													</div>
+												</div>
+										</li>
+
+								{% endrecursetree %}
+						{% endif %}
+
+
+
+						</li>
 
 						<li class="main_nav_item"><a href="/referans">Referanslar</a></li>
 
 						<li class="main_nav_item"><a href="/contact">İletişim</a></li>
 					</ul>
-					<form class="form-inline my-2 my-lg-0" action="/search/" method="post">
+					<form class="form-inline my-2 my-lg-0" " action="/search/" method="post">
 						{% csrf_token %}
 						<input id="query" style="width:400px;" class="form-control mr-sm-2" type="search" placeholder="Ara" name="query">
-     					 <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Ara</button>
+     					 <button style="margin-bottom:2px"; class="btn btn-outline-warning my-2 my-sm-0" type="submit">Ara</button>
    					 </form>
 				</div>
 			</nav>

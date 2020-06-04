@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'mptt',
     'user.apps.UserConfig',
     'order.apps.OrderConfig',
+    'content.apps.ContentConfig',
 ]
 
 MIDDLEWARE = [

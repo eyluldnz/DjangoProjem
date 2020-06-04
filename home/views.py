@@ -8,6 +8,7 @@ import _json
 
 # Create your views here.
 from book.models import Book, Category, Images, Comment
+from content.models import Menu, Content, CImages
 from home.forms import SearchFormu, KayıtFormu
 from home.models import Setting, ContactFormMessage, ContactFormu, UserProfil
 
@@ -16,12 +17,18 @@ def index(request):
     setting =Setting.objects.get(pk=1)
     sliderdata=Book.objects.all()[:4]
     category= Category.objects.all()
+    menu= Menu.objects.all()
+    news= Content.objects.filter(type='haber').order_by('-id')[:4]
+    duyurular=  Content.objects.filter(type='duyuru').order_by('-id')[:4]
     current_user = request.user
-    profil = UserProfil.objects.get(user_id=current_user.id)
+
     context = {'setting': setting, 'page': 'home',
                'category':category,
                'sliderdata': sliderdata,
-               'profil': profil}
+               'menu': menu,
+               'news': news,
+               'duyurular':duyurular,
+               }
     return render(request,'index.html',context)
 
 def about(request):
@@ -164,3 +171,25 @@ def join_view(request):
     return render(request, 'join.html', context)
 
 
+def menu (request, id):
+
+    try:
+        content = Content.objects.get(menu_id=id)
+        link='/content/'+str(content.id)+'/menu'
+        return HttpResponseRedirect(link)
+    except:
+        messages.error(request, "Hata ! İlgili içerik bulunamadı")
+        link='/'
+        return HttpResponseRedirect(link)
+
+
+def contentdetail(request, id, slug):
+    category = Category.objects.all()
+    menu = Menu.objects.all()
+    content = Content.objects.get(pk=id)
+    images=CImages.objects.filter(content_id=id)
+    context = {'category': category,
+               'content': content,
+               'menu':menu,
+               'images':images,}
+    return render(request, 'content_detail.html', context)
