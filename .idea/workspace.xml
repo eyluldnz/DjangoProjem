@@ -2,30 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="697c9127-f8fb-4a97-b6d1-59d00c48fd63" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/content/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/content_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/school-building-icon-flag-on-260nw-1565806768_F3w0keM.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/school-building-icon-flag-on-260nw-1565806768_NIN18LD.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/school-building-icon-flag-on-260nw-1565806768_e7i7fqH.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/school-building-icon-flag-on-260nw-1565806768_njZgu5X.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/school-building-icon-flag-on-260nw-1565806768_u0ZZbUQ.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/yeni_lens.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/migrations/0009_faq.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/migrations/0010_auto_20200617_2257.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/faq.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/0000000375343-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/0000000414134-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/1181.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/697995278_400_wm.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/genel-cerrahi-atlasi-ciltli-615601-14-O.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/indir.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/php_egitim_kitabi_on_kapak_v1_1024x1024.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/temel-cerrahi-el-kitabi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/Templates/user_contents.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/book/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/content/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/book_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/book_search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/content_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/kitapdetay.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/kitapdetay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/sidebar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myproject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/myproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/myproject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/Templates/Loancart_book.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/Templates/Loancart_book.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order/Templates/Order_completed.html" beforeDir="false" afterPath="$PROJECT_DIR$/order/Templates/Order_completed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +77,8 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Django\myproject\home\templates" />
-      <recent name="C:\Django\myproject\content" />
       <recent name="C:\Django\myproject\user\Templates" />
+      <recent name="C:\Django\myproject\content" />
       <recent name="C:\Django\myproject\user" />
       <recent name="C:\Django\myproject\order\Templates" />
     </key>
@@ -255,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591227289060</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="34.video yapıldı">
+      <created>1591310807520</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1591310807520</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -276,7 +291,8 @@
     <MESSAGE value="28.video yapıldı" />
     <MESSAGE value="30*31.video yapıldı" />
     <MESSAGE value="32-33.video yapıldı" />
-    <option name="LAST_COMMIT_MESSAGE" value="32-33.video yapıldı" />
+    <MESSAGE value="34.video yapıldı" />
+    <option name="LAST_COMMIT_MESSAGE" value="34.video yapıldı" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="26" key="#Inspections" timestamp="1586211560712">
@@ -287,10 +303,10 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state x="442" y="171" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.736@0.0.1366.736" timestamp="1590331425221" />
-    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1591227286889">
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1591310804165">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1591227286889" />
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.736@0.0.1366.736" timestamp="1591310804165" />
     <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1591111039121">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
@@ -311,18 +327,18 @@
       <screen x="0" y="0" width="1366" height="736" />
     </state>
     <state width="1345" height="183" key="GridCell.Tab.0.right/0.0.1366.736@0.0.1366.736" timestamp="1591121087749" />
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1591227301056">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2" timestamp="1591310815293">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1591227301056" />
-    <state x="735" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1591300936972">
+    <state x="275" y="101" key="Vcs.Push.Dialog.v2/0.0.1366.736@0.0.1366.736" timestamp="1591310815293" />
+    <state x="735" y="192" key="com.intellij.ide.util.TipDialog" timestamp="1592422103411">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="735" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.736@0.0.1366.736" timestamp="1591300936972" />
-    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591310779893">
+    <state x="735" y="192" key="com.intellij.ide.util.TipDialog/0.0.1366.736@0.0.1366.736" timestamp="1592422103411" />
+    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592434698582">
       <screen x="0" y="0" width="1366" height="736" />
     </state>
-    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.736@0.0.1366.736" timestamp="1591310779893" />
+    <state x="492" y="285" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.736@0.0.1366.736" timestamp="1592434698582" />
     <state x="397" y="159" key="git4idea.merge.GitPullDialog" timestamp="1588793978626">
       <screen x="0" y="0" width="1366" height="736" />
     </state>

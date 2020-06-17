@@ -1,0 +1,96 @@
+ {% extends "homebase.html" %}
+
+ {% block title %} {{profil.user.first_name}} Yorumlarım {% endblock %}
+ {% block keywords %} {{ setting.keywords }} {% endblock %}
+ {% block description %} {{ setting.description}} {% endblock %}
+ {% block head %}
+     <link rel='shortcut icon' type="image/x-icon" href="{{ setting.icon.url}} " />
+ {% endblock %}
+
+
+ {% block body %}
+ {% load static %}
+ <div class="hero_slider_container">
+			<div class="hero_slider owl-carousel">
+
+				<!-- Hero Slide -->
+				<div class="hero_slide" style="height:450px;">
+					<div class="hero_slide_background" style="background:orange;"></div>
+					<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+						<h1 style="color:white;" data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut">Yorumlarım </h1>
+
+					</div>
+				</div>
+            </div>
+ </div>
+
+
+ <div class="popular page_section">
+	 <div class="container">
+	 <div class="contact">
+		 <div class="container">
+			 <div class="row">
+				 <div class="col-md-3">
+
+					 <h4>Kullanıcı Paneli  </h4>
+					 {% include "user_panel.html" %}
+
+				 </div>
+
+				 <div class="col-md-8">
+
+					 <h4>-İçerik Listesi- </h4>
+					  {% if messages %}
+							{% for message in messages %}
+								<div style="color:green; font-size: medium">
+									{{ message|safe }}
+								</div>
+							{% endfor %}
+						{% endif %}
+					 <div>
+						 <a href="/user/addcontent/{{ rs.id }}" class="btn btn-success"> Yeni İçerik</a>
+					 </div>
+					 <table cellpadding="3" width="1050" style="margin-top:5px;">
+						 <tr>
+							 <th class="text-center">Görsel </th>
+							 <th >Başlık</th>
+							 <th class="text-center">Tür</th>
+							 <th class="text-center">Menu </th>
+							 <th class="text-center">Durum</th>
+							 <th class="text-center">Tarih</th>
+							 <th class="text-center"> Detay </th>
+							 <th></th>
+
+						 </tr>
+						 {% for rs in content %}
+						 <tr>
+							 <td class="text-center"> <img src="{{ rs.image.url}}" width="75" height="75">  </img></td>
+							 <td > {{ rs.title}}</td>
+							 <td class="text-center"> {{ rs.type}}</td>
+							 <td class="text-center"> {{ rs.menu }}</td>
+							 <td class="text-center"> {{ rs.status }}</td>
+							 <td class="text-center"> {{ rs.created_at }}</td>
+							 <td><a href="/user/editcontent/{{ rs.id }}" class="btn btn-warning">Düzenle</a></td>
+							 <td class="text-center"> <a href="/user/deletecontent/{{ rs.id }}" onclick="return confirm('Silmek istediğinize emin misiniz?')" class="btn btn-danger" style="margin-top:2px;"> Sil </a> </td>
+						 </tr>
+
+						 {% endfor %}
+					 </table>
+				 </div>
+
+
+
+
+				 </div>
+			 </div>
+
+		 </div>
+	 </div>
+
+
+ </div>
+ </div>
+ </div>
+
+
+ {% endblock %}

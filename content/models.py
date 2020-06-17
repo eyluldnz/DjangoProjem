@@ -1,7 +1,9 @@
+from ckeditor.widgets import CKEditorWidget
 from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 
 # Create your models here.
+from django.forms import ModelForm, TextInput, Select, FileInput
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 from mptt.fields import TreeForeignKey
@@ -31,12 +33,13 @@ class Menu(MPTTModel):
             k=k.parent
         return '->'.join(full_path[::-1])
 
+TYPE = (
+        ('menu', 'menu'), ('haber', 'haber'),('duyuru', 'duyuru'),('etkinlik', 'etkinlik'),)
 
 class Content (models.Model):
     STATUS = (
         ('True', 'Evet'), ('False', 'Hayır'), )
-    TYPE = (
-        ('menu', 'menu'), ('haber', 'haber'),('duyuru', 'duyuru'),('etkinlik', 'etkinlik'),)
+
     menu = models.OneToOneField(Menu,null=True,blank=True, on_delete=models.CASCADE)
     type = models.CharField(max_length=10, choices=TYPE)
     title= models.CharField(max_length=150)

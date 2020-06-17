@@ -43,6 +43,7 @@ urlpatterns = [
     path('loancart/', orderviews.loancart, name='loancart'),
     path('menu/<int:id>', views.menu, name='menu'),
     path('content/<int:id>/<slug:slug>/', views.contentdetail, name='contentdetail'),
+    path('sss/', views.faq, name='faq'),
 
 
 

@@ -1,0 +1,66 @@
+{% extends "homebase.html" %}
+
+{% block title %} Sıkça Sorulan Sorular {% endblock %}
+{% block keywords %}  {% endblock %}
+{% block description %}  {% endblock %}
+{% block head %}
+<link rel='shortcut icon' type="image/x-icon" href="{{ setting.icon.url}} " />
+
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+{% endblock %}
+{% block body %}
+
+{% load static %}
+<div class="hero_slider_container">
+	<div class="hero_slider owl-carousel">
+
+		<!-- Hero Slide -->
+		<div class="hero_slide">
+			<div class="hero_slide_background" style="background-image:url({% static 'images/event_1.jpg' %})"></div>
+			<div class="hero_slide_container d-flex flex-column align-items-center justify-content-center">
+				<div class="hero_slide_content text-center">
+					<h1 data-animation-in="fadeInUp" data-animation-out="animate-out fadeOut"> Sıkça Sorulan Sorular  </h1>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<div class="row">
+		{% include "sidebar.html" %}
+		<div class="col-lg-8">
+			<div class="container">
+				<br>
+				<br>
+
+				<div id="accordion">
+					{% for rs in faq %}
+  					<h3 style="color:orange"> &nbsp;&nbsp; {{ rs.question }} </h3>
+  						<div>
+   						 <p>{{ rs.answer}}</p>
+						</div>
+					{% endfor %}
+				</div>
+				<br>
+				<br>
+
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+
+{% endblock %}
+

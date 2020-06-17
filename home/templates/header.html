@@ -23,7 +23,7 @@
 			<div class="logo_container">
 				<div class="logo">
 					<img src="static/images/logo.png" alt="">
-					<h5>Kütüphane Otamasyon </h5>
+					<h5> Kütüphane Otamasyon </h5>
 
 				</div>
 			</div>
@@ -33,7 +33,7 @@
 				<div class="main_nav">
 					<ul class="main_nav_list">
 						<li class="main_nav_item"><a href="/">Anasayfa</a></li>
-						<li class="main_nav_item"><a href="/">Hakkımızda</a></li>
+						<li class="main_nav_item"><a href="/about">Hakkımızda</a></li>
 						{% if menu  %}
 						{% load mptt_tags %}
 						{% recursetree menu %}
@@ -41,9 +41,7 @@
 							<button type="button"  style="margin-bottom:4px;" class="btn dropdown" {% if not node.is_leaf_node %} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {% endif %}> <a href="/menu/{{ node.id }}">
 													<span style="font-family: 'Open Sans', sans-serif;font-size: 14px;text-transform: uppercase;font-weight: 700;color: #3a3a3a;">	{{ node.title}} </span> </a></button>
 
-
-
-														<div class="dropdown-menu">
+													<div class="dropdown-menu">
 													<div class="btn-group droprightt">
 														<div class="col-lg-10">
 

@@ -10,17 +10,19 @@ import _json
 from book.models import Book, Category, Images, Comment
 from content.models import Menu, Content, CImages
 from home.forms import SearchFormu, KayıtFormu
-from home.models import Setting, ContactFormMessage, ContactFormu, UserProfil
+from home.models import Setting, ContactFormMessage, ContactFormu, UserProfil, Faq
 
 
 def index(request):
     setting =Setting.objects.get(pk=1)
-    sliderdata=Book.objects.all()[:4]
+    sliderdata=Book.objects.all().order_by('-id')[:6]
     category= Category.objects.all()
+    randombooks=Book.objects.all().order_by('?')[:6]
     menu= Menu.objects.all()
     news= Content.objects.filter(type='haber').order_by('-id')[:4]
     duyurular=  Content.objects.filter(type='duyuru').order_by('-id')[:4]
     current_user = request.user
+    profil = UserProfil.objects.get(user_id=request.user.id)
 
     context = {'setting': setting, 'page': 'home',
                'category':category,
@@ -28,17 +30,22 @@ def index(request):
                'menu': menu,
                'news': news,
                'duyurular':duyurular,
+               'books': randombooks,'profil':profil,
                }
     return render(request,'index.html',context)
 
 def about(request):
     setting =Setting.objects.get(pk=1)
-    context = {'setting': setting, 'page': 'about'}
+    menu = Menu.objects.all()
+    profil = UserProfil.objects.get(user_id=request.user.id)
+    context = {'setting': setting, 'page':about,  'menu':menu,'profil':profil,}
     return render(request,'about.html',context)
 def referans(request):
     setting =Setting.objects.get(pk=1)
-    context = {'setting': setting, 'page': 'referans'}
-    return render(request,'referans.html',context)
+    menu = Menu.objects.all()
+    profil = UserProfil.objects.get(user_id=request.user.id)
+    context = {'setting': setting, 'page':referans,  'menu':menu,'profil':profil,}
+    return render(request,'referans.html',context, )
 
 def contact(request):
 
@@ -60,31 +67,38 @@ def contact(request):
 
     setting =Setting.objects.get(pk=1)
     forms =ContactFormu()
-    context = {'setting': setting, 'forms':forms}
+    menu = Menu.objects.all()
+    profil = UserProfil.objects.get(user_id=request.user.id)
+    context = {'setting': setting, 'forms':forms, 'menu':menu,'profil':profil,}
     return render(request,'contact.html',context)
 
 def category_books(request,id, slug):
     category = Category.objects.all()
+    menu = Menu.objects.all()
     profil = UserProfil.objects.get(user_id=request.user.id)
     categorydata=Category.objects.get(pk=id)
     books = Book.objects.filter(category_id=id)
-    context = {'books': books,
+    setting = Setting.objects.get(pk=1)
+    context = {'setting': setting,'books': books,
                'category': category,
-               'categorydata': categorydata,'profil':profil,}
+               'categorydata': categorydata,'profil':profil, 'menu':menu,}
 
     return render(request, 'kitaplar.html', context)
 
 def book_detail(request,id):
     profil = UserProfil.objects.get(user_id=request.user.id)
     category = Category.objects.all()
+    menu = Menu.objects.all()
     book = Book.objects.get(pk=id)
     images=Images.objects.filter(book_id=id)
+    setting = Setting.objects.get(pk=1)
     comments =Comment.objects.filter(book_id=id,status='True')
     context = { 'book':book,
                'category': category,
                 'images': images,
                 'comments': comments,
                 'profil': profil,
+                'menu': menu,'setting': setting,'profil':profil,
                }
 
     return render(request, 'kitapdetay.html',context)
@@ -96,9 +110,11 @@ def book_search(request):
         form = SearchFormu(request.POST)
         if form.is_valid():
             category=Category.objects.all()
+            menu = Menu.objects.all()
             query = form.cleaned_data['query']
             books=Book.objects.filter(title__icontains=query)
-            context= {'books': books , 'category': category, 'query': query,'profil':profil,  }
+            setting = Setting.objects.get(pk=1)
+            context= {'books': books , 'category': category, 'query': query,'profil':profil, 'menu':menu, 'setting': setting,'profil':profil, }
             return render(request,'book_search.html',context)
 
         return HttpResponseRedirect('/')
@@ -144,7 +160,9 @@ def login_view(request):
             return HttpResponseRedirect('/login/')
 
     category = Category.objects.all()
-    context = {'category': category}
+    menu = Menu.objects.all()
+    setting = Setting.objects.get(pk=1)
+    context = {'category': category, 'menu':menu,'setting': setting,}
     return render(request, 'login.html', context)
 
 
@@ -166,8 +184,12 @@ def join_view(request):
 
     form= KayıtFormu()
     category = Category.objects.all()
+    menu = Menu.objects.all()
+    setting = Setting.objects.get(pk=1)
     context = {'category': category,
-               'form':form}
+               'form':form,
+               'menu': menu,'setting': setting,'profil':profil,
+               }
     return render(request, 'join.html', context)
 
 
@@ -188,8 +210,20 @@ def contentdetail(request, id, slug):
     menu = Menu.objects.all()
     content = Content.objects.get(pk=id)
     images=CImages.objects.filter(content_id=id)
+    setting = Setting.objects.get(pk=1)
+    profil = UserProfil.objects.get(user_id=request.user.id)
     context = {'category': category,
                'content': content,
                'menu':menu,
-               'images':images,}
+               'images':images,'setting': setting,'profil':profil,}
     return render(request, 'content_detail.html', context)
+
+
+def faq(request):
+    category = Category.objects.all()
+    menu = Menu.objects.all()
+    faq=Faq.objects.all()
+    setting = Setting.objects.get(pk=1)
+    profil = UserProfil.objects.get(user_id=request.user.id)
+    context = {'category': category, 'menu':menu, 'faq':faq,'setting':setting ,'profil':profil,}
+    return render(request, 'faq.html', context)
